@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjetoLivraria.API</name>
+    </assembly>
+    <members>
+        <member name="M:ProjetoLivraria.API.Controllers.LivrosController.Get">
+             <summary>
+             Lista todos os livros.
+             </summary>
+             <remarks>
+             * Opções de consulta.
+             <![CDATA[https://docs.microsoft.com/en-us/odata/client/query-options
+             -> <a href="https://docs.microsoft.com/en-us/odata/client/query-options" target="_blank">Clique</a>]]>
+            
+             * Busca ordenada por qualquer atributo do livro.
+             <![CDATA[Ex1. : https://localhost:5000/livros/listar_livros?$filter=startsWith(autor,'L')&$orderby=autor desc
+             -> <a href="https://localhost:5000/livros/listar_livros?$filter=startsWith(autor,%27L%27)&$orderby=autor%20desc" target="_blank">Clique</a>]]>
+            
+             * Busca ordenada por qualquer atributo do livro.
+             <![CDATA[Ex2. : https://localhost:5000/livros/listar_livros?$orderby=autor&filter=autor eq 'autor'
+             -> <a href="https://localhost:5000/livros/listar_livros?$orderby=autor&$filter=autor%20eq%20%27autor%27" target="_blank">Clique</a>]]>
+            
+             * Filtrar a seleção dos livros por qualquer atributo do livro.
+             <![CDATA[Ex1. : https://localhost:5000/livros/listar_livros?&$select=autor,nome
+             -> <a href="https://localhost:5000/livros/listar_livros?&$select=autor,nome" target="_blank">Clique</a>]]>
+            
+              * Filtrar a seleção dos livros por qualquer atributo do livro.
+             <![CDATA[Ex2. : https://localhost:5000/livros/listar_livros?$filter=autor in ('busca1','busca2')
+             -> <a href="https://localhost:5000/livros/listar_livros?$filter=autor%20in%20(%27busca1%27,%27busca2%27)" target="_blank">Clique</a>]]>
+             </remarks>
+        </member>
+        <member name="M:ProjetoLivraria.API.Controllers.LivrosController.Get(System.Int32)">
+            <summary>
+            Busca pelo ID. do livro
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProjetoLivraria.API.Controllers.LivrosController.Delete(ProjetoLivraria.Application.DTOs.LivroDTO)">
+            <summary>
+            Remover livro
+            </summary>
+            <param name="livroDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProjetoLivraria.API.Controllers.LivrosController.SubmitForm(ProjetoLivraria.API.Controllers.LivrosController.LivroForm)">
+            <summary>
+            Adicionar livro.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjetoLivraria.API.Controllers.LivrosController.SubmitFormAtualizar(ProjetoLivraria.API.Controllers.LivrosController.LivroForm,System.Int32)">
+            <summary>
+            Atualizar livro.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ProjetoLivraria.API.Controllers.LivrosController.Get(System.String)">
+            <summary>
+            Visualizar imagem da capa
+            </summary>
+            <param name="nomeDoArquivo">Nome do arquivo</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
