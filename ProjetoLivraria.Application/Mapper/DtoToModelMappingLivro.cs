@@ -17,7 +17,7 @@ namespace ProjetoLivraria.Application.Mapper
         private void LivroMap()
         {
             CreateMap<LivroDTO, Livro>()
-                .ForMember(dest => dest.ID, opt => opt.Ignore())
+                .ForMember(dest => dest.ID, opt => opt.MapFrom(x => x.ID))//opt.Ignore())
                 .ForMember(dest => dest.ISBN, opt => opt.MapFrom(x => x.ISBN))
                 .ForMember(dest => dest.Autor, opt => opt.MapFrom(x => x.Autor))
                 .ForMember(dest => dest.Nome, opt => opt.MapFrom(x => x.Nome))
