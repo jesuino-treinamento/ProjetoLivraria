@@ -5,6 +5,8 @@ namespace ProjetoLivraria.Domain.Entities
 {
     public class Livro : Base
     {
+        //[Column(TypeName = "int")]
+        //public int ID { get; set; }
 
         [Column(TypeName = "varchar(100)")]
         public string ISBN { get; set; }
